@@ -4,19 +4,23 @@ import OrderTotals from "./components/OrderTotals";
 import TipPercentageForm from "./components/TipPercentageForm";
 import { menuItems } from "./data/db"
 import useOrder from "./hooks/useOrder";
+import DarkModeButton from "./components/DarkModeButton";
 
 function App() {
 
   const { order, addItem, removeItem, tip, setTip, placeOlder } = useOrder()
   return (
     <>
-      <header className=" bg-teal-300 py-5">
-        <h1 className="text-center text-4xl font-bold uppercase">Calculadora De Propinas y Consumo</h1>
+      <header className="relative bg-teal-300 py-5 dark:bg-gray-400">
+        <h1 className="text-center text-4xl font-bold uppercase dark:text-gray-800">Calculadora De Propinas y Consumo</h1>
+        <div className=" absolute right-10 top-6">
+          <DarkModeButton/>
+        </div>
       </header>
 
       <main className="max-w-7xl mx-auto py-20 grid  md:grid-cols-2">
         <div className="p-5">
-          <h2 className="  text-4xl font-black">Menu</h2>
+          <h2 className="dark:text-gray-400  text-4xl font-black">Menu</h2>
 
           <div className=" space-y-3 mt-10">
 
@@ -55,12 +59,12 @@ function App() {
           ) : (
             <>
 
-              <p className=" text-center text-xl font-bold uppercase">Esperando Orden.</p>
+              <p className=" text-center text-xl dark:text-gray-400 font-bold uppercase">Esperando Orden.</p>
 
               <div className="flex flex-row justify-center gap-2">
-                <div className="w-4 h-4 rounded-full bg-teal-200 animate-bounce"></div>
-                <div className="w-4 h-4 rounded-full bg-teal-200 animate-bounce [animation-delay:-.3s]"></div>
-                <div className="w-4 h-4 rounded-full bg-teal-200 animate-bounce [animation-delay:-.5s]"></div>
+                <div className="w-4 h-4 rounded-full bg-teal-200 animate-bounce dark:bg-gray-400"></div>
+                <div className="w-4 h-4 rounded-full bg-teal-200 animate-bounce dark:bg-gray-400 [animation-delay:-.3s]"></div>
+                <div className="w-4 h-4 rounded-full bg-teal-200 animate-bounce dark:bg-gray-400 [animation-delay:-.5s]"></div>
               </div>
             </>
 

@@ -25,7 +25,7 @@ type TipPercentageFormProps = {
 
 const TipPercentageForm = ({ setTip, tip }: TipPercentageFormProps) => {
     return (
-        <div>
+        <div className=" dark:text-gray-400">
             <h3 className=" font-black text-2xl">Propina:</h3>
             <form action="">
                 {tipOptions.map(tipOption => (

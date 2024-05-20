@@ -23,7 +23,7 @@ const OrderTotals = ({ order, tip, placeOlder }: OrderTotalProps) => {
 
     return (
         <>
-            <div className=" space-y-3">
+            <div className="dark:text-gray-400 space-y-3">
                 <h2 className=" font-black text-2xl">Totales y Propina</h2>
                 <p>SubTotal a pagar:
 
@@ -47,8 +47,8 @@ const OrderTotals = ({ order, tip, placeOlder }: OrderTotalProps) => {
             <button
                 onClick={placeOlder}
                 disabled={totalAmount === 0}
-                className="cursor-pointer transition-all bg-teal-500 text-white px-6 py-2 rounded-lg
-            border-teal-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+                className="cursor-pointer transition-all bg-teal-500 dark:bg-teal-800 text-white px-6 py-2 rounded-lg
+            border-teal-600 dark:border-teal-700 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
             active:border-b-[2px] active:brightness-90 active:translate-y-[2px] uppercase w-full disabled:opacity-20">
                 Guardar Orden
             </button>
